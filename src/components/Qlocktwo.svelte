@@ -1,5 +1,4 @@
 <script lang="ts">
-  // TODO: rename component to clock
   import dayjs from "dayjs";
   import { onDestroy, onMount } from "svelte";
   import type { ClockConfig } from "../models/ClockConfig";
@@ -137,30 +136,24 @@
     const h = config.sentences.hours[hour];
     const m = config.sentences.minutes[minute];
 
-    console.log("=----=");
-    [...s, h, ...m].map((arr) => {
-      const rowIndex = arr[0];
-      const startIndex = arr[1];
-      const endIndex = arr[2];
-
-      clockface[rowIndex] = clockface[rowIndex].map((v, index) => {
-        if (index >= startIndex && index <= endIndex) {
-          v.isHighlighted = true;
-        }
-        return v;
+    clockface.map((rows, i) => {
+      rows.map((row, j) => {
+        row.isHighlighted =
+          [...s, h, ...m].findIndex((v) => {
+            return v[0] == i && j >= v[1] && j <= v[2];
+          }) > -1;
       });
     });
   }
 </script>
 
 <div
-  class="grid grid-cols-11 gap-6 rounded overflow-hidden shadow-lg p-6"
-  style="background-color: rgb(239, 159, 188);"
+  class="grid grid-cols-11 gap-4 rounded overflow-hidden shadow-xl p-24 bg-primary"
 >
   {#each clockface as rows, i}
     {#each rows as value, j}
       <span
-        class="font-extrabold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-center"
+        class="font-extrabold text-base sm:text-lg md:text-xl lg:text-2xl text-center"
         class:neon={value.isHighlighted}
         class:text-white={value.isHighlighted}
         class:opacity-70={!value.isHighlighted}
