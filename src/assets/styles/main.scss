@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Cako-Regular";
+  src: url("../fonts/cako-regular.woff") format("woff");
+}
+
+:root {
+  font-family: Cako-Regular, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #f9f7f5;
+}
+
+#app {
+  margin: 0 auto;
+}
+
+.neon {
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 42px #fff,
+    0 0 77px #fff,
+    0 0 100px #fff;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+  }
+}
