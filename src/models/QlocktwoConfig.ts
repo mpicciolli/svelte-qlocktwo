@@ -1,4 +1,4 @@
-export interface ClockTwoConfig {
+export interface QlocktwoConfig {
     [key: string]: {
         clockFace: string[][];
         sentences: {
@@ -13,7 +13,7 @@ export interface ClockTwoConfig {
     }
 }
 
-export const qlockTwoConfigs: ClockTwoConfig = {
+export const qlocktwoConfigs: QlocktwoConfig = {
     en: {
         clockFace: [
             ["I", "T", "L", "I", "S", "B", "F", "A", "M", "P", "M"],

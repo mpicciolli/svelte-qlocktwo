@@ -20,6 +20,8 @@
 
 <style lang="scss" scoped>
   .clockface {
+    font-family: Cako-Regular;
+
     &__letter {
       transition: text-shadow 0.5s ease;
 
