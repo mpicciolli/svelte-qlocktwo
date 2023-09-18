@@ -149,7 +149,7 @@
 </script>
 
 <div
-  class="grid grid-cols-11 gap-4 rounded overflow-hidden shadow-xl p-8 sm:p-14 md:p-16 lg:p-24 bg-primary"
+  class="grid grid-cols-11 gap-4 rounded overflow-hidden shadow-xl p-8 sm:p-14 md:p-16 lg:p-24 bg-gradiant-p-to-sf"
 >
   {#each clockface as rows, i}
     {#each rows as value, j}
@@ -166,6 +166,14 @@
 </div>
 
 <style>
+  .bg-gradiant-p-to-pf {
+    background: linear-gradient(135deg, hsl(var(--p)), hsl(var(--pf)));
+  }
+
+  .bg-gradiant-p-to-sf {
+    background: linear-gradient(135deg, hsl(var(--p)), hsl(var(--sf)));
+  }
+
   .neon {
     text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 42px #fff, 0 0 77px #fff,
       0 0 100px #fff;
