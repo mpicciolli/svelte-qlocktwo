@@ -154,10 +154,11 @@
   {#each clockface as rows, i}
     {#each rows as value, j}
       <span
-        class="font-extrabold text-base sm:text-lg md:text-xl lg:text-2xl text-center"
-        class:neon={value.isHighlighted}
+        class="font-extrabold text-base sm:text-lg md:text-xl lg:text-2xl text-center text-base-content"
+        class:highlighted={value.isHighlighted}
         class:text-white={value.isHighlighted}
-        class:opacity-70={!value.isHighlighted}
+        class:opacity-40={!value.isHighlighted}
+        class:engraved={!value.isHighlighted}
       >
         {value.letter}
       </span>
@@ -166,6 +167,10 @@
 </div>
 
 <style>
+  .engraved {
+    text-shadow: -1px -1px 1px hsl(var(--bc) / 0.4);
+  }
+
   .bg-gradiant-p-to-pf {
     background: linear-gradient(135deg, hsl(var(--p)), hsl(var(--pf)));
   }
@@ -174,7 +179,7 @@
     background: linear-gradient(135deg, hsl(var(--p)), hsl(var(--sf)));
   }
 
-  .neon {
+  .highlighted {
     text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 42px #fff, 0 0 77px #fff,
       0 0 100px #fff;
   }
