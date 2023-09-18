@@ -46,7 +46,7 @@
 </script>
 
 <div class="dropdown dropdown-end">
-  <label tabindex="0" class="btn normal-case btn-ghost m-1 text-base-content">
+  <label tabindex="0" class="btn btn-ghost m-1 text-base-content">
     <svg
       width="20"
       height="20"
