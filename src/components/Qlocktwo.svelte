@@ -83,6 +83,7 @@
           [2, 6, 9],
           [3, 9, 10],
         ],
+        60: [[9, 5, 10]], //O'CLOCK
       },
     },
   };
@@ -148,7 +149,7 @@
 </script>
 
 <div
-  class="grid grid-cols-11 gap-4 rounded overflow-hidden shadow-xl p-24 bg-primary"
+  class="grid grid-cols-11 gap-4 rounded overflow-hidden shadow-xl p-8 sm:p-14 md:p-16 lg:p-24 bg-primary"
 >
   {#each clockface as rows, i}
     {#each rows as value, j}
@@ -163,3 +164,10 @@
     {/each}
   {/each}
 </div>
+
+<style>
+  .neon {
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 42px #fff, 0 0 77px #fff,
+      0 0 100px #fff;
+  }
+</style>
