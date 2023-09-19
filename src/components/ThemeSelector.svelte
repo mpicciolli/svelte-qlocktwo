@@ -60,7 +60,6 @@
         <button
           class="outline-base-content overflow-hidden rounded-lg text-left"
           data-set-theme={theme}
-          data-act-class="[&amp;_svg]:visible"
           on:click={() => onThemeSelected(theme)}
         >
           <div
@@ -77,10 +76,7 @@
                     : ''}"
                 />
                 <div class="flex-grow text-sm">{theme}</div>
-                <div
-                  class="flex h-full flex-shrink-0 flex-wrap gap-1"
-                  data-svelte-h="svelte-izuv7l"
-                >
+                <div class="flex h-full flex-shrink-0 flex-wrap gap-1">
                   <div class="bg-primary w-2 rounded" />
                   <div class="bg-secondary w-2 rounded" />
                   <div class="bg-accent w-2 rounded" />
