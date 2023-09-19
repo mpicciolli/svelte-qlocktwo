@@ -12,7 +12,7 @@
   <Qlocktwo />
   <section>
     <p class="text-center">
-      A Sevelte implementation of <a class="link" href="https://qlocktwo.com">
+      A Svelte implementation of <a class="link" href="https://qlocktwo.com">
         Biegert & Funk's QLOCKTWO
       </a>
     </p>
